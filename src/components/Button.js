@@ -1,12 +1,11 @@
-const Button = ({ text, type, tailwindStyle }) => {
+import { Link } from "react-router-dom";
+
+const Button = ({to, text, type, tailwindStyle }) => {
   return (
-    <button
-      className={`px-6 py-3 bg-darkGreen text-white font-semibold rounded-full shadow-md shadow-gray-700  hover:bg-teal ${tailwindStyle}`}
-      type={type}
-    >
+    <Link className={`px-6 py-3 bg-darkGreen text-white font-semibold rounded-full shadow-md shadow-gray-500 hover:shadow-black hover:shadow-lg hover:text-white hover:bg-teal ${tailwindStyle}`} type={type} to={to}>
       {text}
-      <button type={type}></button>
-    </button>
+    </Link>
+    
   );
 };
 

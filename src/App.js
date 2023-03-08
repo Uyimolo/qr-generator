@@ -1,5 +1,6 @@
 import Homepage from "./pages/Homepage";
-import About from "./pages/About"
+import About from "./pages/About";
+import Auth from "./pages/Auth";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -12,7 +13,10 @@ function App() {
     createRoutesFromElements(
       <Route path="/" element={<Layout />}>
         <Route index element={<Homepage />} />
-        <Route index element={<About />} />
+        <Route path="about" element={<About />} />
+        <Route path="auth" element={<Auth />}>
+          
+        </Route>
       </Route>
     )
   );

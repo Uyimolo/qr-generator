@@ -7,7 +7,7 @@ const CreatingQrCodes = () => {
     <section className="flex flex-col px-6 py-8 bg-gray-300 items-center space-y-12 md:px-16 md:pt-20 md:pb-20 lg:px-24 xl:px-48">
       <h2 className="text-2xl font-bold text-center text-gray-700 lg:text-3xl xl:text-4xl">
         Creating QR codes have never been so easy
-      </h2>
+      </h2> 
       <div className="flex flex-col space-y-8 md:w-full md:flex-row md:space-y-0 md:space-x-4 md:justify-around">
         <Thumbnail
           image={choose}

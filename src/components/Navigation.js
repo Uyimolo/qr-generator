@@ -27,6 +27,7 @@ const Navigation = ({ active }) => {
         type="button"
         text="Get Started"
         tailwindStyle="translate-y-20 w-fit mx-6 self-end md:translate-y-0 md:self-auto "
+        to="auth"
       />
     </div>
   );
