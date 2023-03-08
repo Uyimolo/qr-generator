@@ -11,7 +11,7 @@ const Header = () => {
       <img
         src={hamburger}
         alt="Navigation toggle button"
-        className="md:hidden z-10 cursor-pointer"
+        className="md:hidden z-20 cursor-pointer"
         onClick={() => setNavActive(!navActive)}
       />
       <Navigation active={navActive} />
