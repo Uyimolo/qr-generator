@@ -1,6 +1,9 @@
 import Homepage from "./pages/Homepage";
 import About from "./pages/About";
 import Auth from "./pages/Auth";
+import LoginForm from "./components/LoginForm"
+import SignupForm from "./components/SignupForm"
+
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -15,7 +18,8 @@ function App() {
         <Route index element={<Homepage />} />
         <Route path="about" element={<About />} />
         <Route path="auth" element={<Auth />}>
-          
+          <Route path="signin" element={<LoginForm />} />
+          <Route path="signout" element={<SignupForm />} />
         </Route>
       </Route>
     )

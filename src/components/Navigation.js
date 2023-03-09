@@ -3,7 +3,7 @@ import Button from "./Button";
 
 const Navigation = ({ active }) => {
   const navListClass =
-    "text-slate-700 font-semibold transition-all px-6 py-1 text-right transition-700 hover:bg-slate-500 hover:text-teal md:border-b-4 md:self-center md:border-transparent md:px-0 lg:text-lg hover:border-darkGreen hover:bg-transparent";
+    "text-slate-700 font-semibold transition-all px-6 py-1 text-right transition-700 hover:bg-slate-500 hover:text-teal md:border-b-4 md:self-center md:border-transparent md:px-0 lg:text-lg hover:border-teal hover:bg-transparent";
   return (
     <div
       className={`${

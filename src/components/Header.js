@@ -6,7 +6,7 @@ import { useState } from "react";
 const Header = () => {
   const [navActive, setNavActive] = useState(false);
   return (
-    <div className="fixed top-0 left-0 py-6 px-6 flex bg-white items-center justify-between shadow-md cursor-pointer relative md:px-16 lg:px-16 xl:px-24">
+    <div className="fixed top-0 left-0 py-6 px-6 bg-white flex items-center justify-between shadow-md cursor-pointer relative md:px-16 lg:px-16 xl:px-24">
       <Logo />
       <img
         src={hamburger}
