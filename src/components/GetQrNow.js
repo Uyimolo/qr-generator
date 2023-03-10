@@ -3,7 +3,7 @@ import QrImage from "../images/QR code_Two Color.svg";
 const GetQrNow = () => {
   return (
     <section className="flex flex-col px-6 py-8 items-stretch space-y-12 md:flex-row md:space-y-0 md:py-0 md:px-0">
-      <div className="flex flex-col space-y-4 justify-center  md:w-1/2 md:pl-16 lg:pl-24 xl:pl-48">
+      <div className="flex flex-col space-y-4 justify-center  md:w-1/2 md:pl-16 lg:pl-24 xl:pl-36">
         <h2 className="text-2xl font-bold text-center text-gray-700 md:text-left lg:text-3xl xl:text-4xl">
           Try GetQR now!
         </h2>

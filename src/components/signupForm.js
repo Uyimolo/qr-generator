@@ -1,8 +1,8 @@
 import ButtonSecondary from "./ButtonSecondary";
 
-const signupForm = ({ setIsSignup }) => {
+const signupForm = ({ setIsSignup, handleSignup ,setEmail, setPassword}) => {
   return (
-    <form className=" max-w-sm px-6 pt-10 pb-10 bg-white flex flex-col shadow-lg shadow-gray-800 space-y-8 rounded-3xl">
+    <form className=" max-w-sm px-6 pt-10 pb-10 bg-white flex flex-col shadow-lg shadow-gray-800 space-y-8 rounded-3xl" onSubmit={handleSignup}>
       <div className="flex flex-col space-y-1">
         <label htmlFor="email" className="text-gray-500 font-semibold">
           Email
@@ -13,6 +13,7 @@ const signupForm = ({ setIsSignup }) => {
           id="email"
           placeholder="example@getQr.com"
           className="border-b-4 border-teal bg-transparent text-gray-500 p-2"
+          onChange={(e) => setEmail(e.target.value)}
         />
       </div>
       <div className="flex flex-col space-y-1">
@@ -25,6 +26,7 @@ const signupForm = ({ setIsSignup }) => {
           id="password"
           placeholder="******"
           className="border-b-4 border-teal text-gray-500 p-2"
+          onChange={(e) => setPassword(e.target.value)}
         />
       </div>
       <p

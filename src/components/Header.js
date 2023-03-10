@@ -14,7 +14,7 @@ const Header = () => {
         className="md:hidden z-20 cursor-pointer"
         onClick={() => setNavActive(!navActive)}
       />
-      <Navigation active={navActive} />
+      <Navigation navActive={navActive} setNavActive={setNavActive} />
     </div>
   );
 };
