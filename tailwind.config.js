@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      backgroundImage: {
+        "recentQRImage": "./src/images/Data Arranging_Monochromatic.svg",
+      },
       colors: {
         darkBlue: "#080833",
         darkGreen: "#2b6777",
@@ -12,6 +15,7 @@ module.exports = {
         secondary: "#ffd386",
         white: "#ffffff",
       },
+      
     },
   },
   plugins: [],

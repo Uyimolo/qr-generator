@@ -2,7 +2,7 @@ import ButtonSecondary from "./ButtonSecondary";
 
 const LoginForm = ({ setIsSignup, setEmail, setPassword, handleSignin }) => {
   return (
-    <form className=" max-w-sm px-6 pt-10 pb-10 bg-white flex flex-col shadow-lg shadow-gray-800 space-y-8 rounded-3xl" onSubmit={handleSignin}>
+    <form className=" max-w-sm px-6 pt-10 pb-10 bg-verylightGreen flex flex-col shadow-lg shadow-gray-800 space-y-8 rounded-3xl" onSubmit={handleSignin}>
       <div className="flex flex-col space-y-1">
         <label htmlFor="email" className="text-gray-500 font-semibold">
           Email

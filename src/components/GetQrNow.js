@@ -15,7 +15,7 @@ const GetQrNow = () => {
         <Button
           text="Get Started"
           type="button"
-          tailwindStyle="mx-auto w-fit md:mx-0"
+          tailwindStyle="mx-auto w-fit md:mx-0 bg-secondary"
         />
       </div>
       <img

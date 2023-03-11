@@ -41,7 +41,7 @@ const AuthPage = () => {
     }
   };
   return (
-    <div className="flex flex-col px-6 py-8 bg-teal space-y-12  md:justify-between  md:px-16 md:pt-20 md:pb-20 lg:justify-center lg:space-x-28 lg:flex-row lg:px-24 xl:px-36">
+    <div className="flex flex-col px-6 py-8 bg-white space-y-12  md:justify-between  md:px-16 md:pt-20 md:pb-20 lg:justify-center lg:space-x-28 lg:flex-row lg:px-24 xl:px-36">
       <img
         src={authImage}
         alt=""
