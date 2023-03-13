@@ -8,10 +8,10 @@ const CreateQR = () => {
       <div className="flex flex-col space-y-4 p-4 rounded-lg bg-darkGreen md:h-full md:flex-row lg:justify-between">
         {/* left side */}
         <div className="flex flex-col space-y-4">
-          <h1 className="text-3xl font-bold text-gray-200 text-center lg:text-4xl xl:text-5xl md:text-left">
+          <h1 className="text-3xl font-bold text-gray-100 text-center lg:text-4xl xl:text-5xl md:text-left">
             Create your Qr Code
           </h1>
-          <p className="text-gray-300 font-semibold text-md text-center md:text-left md:max-w-xs lg:max-w-sm">
+          <p className="text-gray-200 font-semibold text-md text-center md:text-left md:max-w-xs lg:max-w-sm">
             Get started by specifying the type of QR code you want to create.
           </p>
           {/* choose action */}

@@ -7,7 +7,7 @@ const GetQrNow = () => {
         <h2 className="text-2xl font-bold text-center text-gray-700 md:text-left lg:text-3xl xl:text-4xl">
           Try GetQR now!
         </h2>
-        <p className="text-sm font-semibold text-gray-500 text-center max-w-xs mx-auto md:mx-0 md:text-md md:text-left md:max-w-sm lg:max-w-md ">
+        <p className="text-md font-semibold text-gray-500 text-center max-w-xs mx-auto md:mx-0 md:text-md md:text-left md:max-w-sm lg:max-w-md ">
           Get started for free. Generate codes for anything you want. Have all
           digital information saved in a QR code. Sign in to create your own QR
           code now!

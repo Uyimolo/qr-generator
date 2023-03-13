@@ -16,7 +16,7 @@ const Header = () => {
         className="lg:hidden z-20 cursor-pointer"
         onClick={() => setNavActive(!navActive)}
       />
-      <button className="text-white absolute left-40 md:left-60 p-2 bg-teal rounded-md" onClick={() => navigate(-1)}> {`< `}Go back</button>
+      <button className="text-white absolute text-xs left-40 md:left-60 p-2 bg-teal rounded-md z-10" onClick={() => navigate(-1)}> {`< `}Go back</button>
       <Navigation navActive={navActive} setNavActive={setNavActive} />
     </div>
   );

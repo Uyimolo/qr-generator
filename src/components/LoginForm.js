@@ -1,8 +1,12 @@
 import ButtonSecondary from "./ButtonSecondary";
+import Spinner from "./Spinner";
 
-const LoginForm = ({ setIsSignup, setEmail, setPassword, handleSignin }) => {
+const LoginForm = ({ setIsSignup, setEmail, setPassword, handleSignin, spinner }) => {
   return (
-    <form className=" max-w-sm px-6 pt-10 pb-10 bg-verylightGreen flex flex-col shadow-lg shadow-gray-800 space-y-8 rounded-3xl" onSubmit={handleSignin}>
+    <form
+      className=" max-w-sm px-6 pt-10 pb-10 bg-verylightGreen flex flex-col shadow-lg shadow-gray-800 space-y-6 rounded-3xl"
+      onSubmit={handleSignin}
+    >
       <div className="flex flex-col space-y-1">
         <label htmlFor="email" className="text-gray-500 font-semibold">
           Email
@@ -29,6 +33,8 @@ const LoginForm = ({ setIsSignup, setEmail, setPassword, handleSignin }) => {
           onChange={(e) => setPassword(e.target.value)}
         />
       </div>
+      {spinner && <Spinner />}
+
       <p
         className="text-gray-500 font-semibold cursor-pointer"
         onClick={() => setIsSignup(false)}
