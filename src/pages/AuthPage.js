@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import LoginForm from "../components/LoginForm";
 import SignupForm from "../components/SignupForm";
 import authImage from "../images/undraw_unlock_re_a558.svg";
@@ -8,18 +8,28 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+import { userContext } from "../context/UserProvider";
 const AuthPage = () => {
   //states
+  const [user, setUser] = useContext(userContext);
   const [isSignup, setIsSignup] = useState(false);
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
-
+  const navigate = useNavigate();
   //signup function
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
-      console.log(auth.currentUser);
+      const isSignedUp = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      if (isSignedUp) {
+        setUser(isSignedUp.user.email);
+        navigate("/dashboard");
+      }
     } catch (err) {
       console.log(err);
     }
@@ -34,7 +44,8 @@ const AuthPage = () => {
         password
       );
       if (isSignedIn) {
-        console.log("pkl");
+        setUser(isSignedIn.user.email);
+        navigate("/dashboard");
       }
     } catch (err) {
       console.log(err);
