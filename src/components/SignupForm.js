@@ -1,7 +1,7 @@
 import ButtonSecondary from "./ButtonSecondary";
 import Spinner from "./Spinner";
 
-const signupForm = ({
+const SignupForm = ({
   setIsSignup,
   handleSignup,
   setEmail,
@@ -52,4 +52,4 @@ const signupForm = ({
   );
 };
 
-export default signupForm;
+export default SignupForm;
