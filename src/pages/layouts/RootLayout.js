@@ -7,7 +7,7 @@ const Layout = () => {
       <header className="fixed w-full left-0 top-0">
         <Header />
       </header>
-      <main className="mt-20">
+      <main className="mt-20 bg-white min-h-[70vh] lg:min-h-[60vh]">
         <Outlet />
       </main>
       <Footer />

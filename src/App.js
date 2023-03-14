@@ -32,7 +32,7 @@ function App() {
     )
   );
   return (
-    <div className="relative">
+    <div className="">
       <UserProvider>
         <RouterProvider router={router} />
       </UserProvider>
