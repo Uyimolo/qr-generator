@@ -12,20 +12,20 @@ import { useNavigate } from "react-router-dom";
 import { userContext } from "../context/UserProvider";
 const AuthPage = () => {
   //states
-  const [user, setUser] = useContext(userContext);
+  const [setUser] = useContext(userContext);
   const [isSignup, setIsSignup] = useState(false);
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
-  const [spinner, setSpinner] = useState(false)
-  const [formData, setFormData] = useState({
-    email : "",
-    password : ""
-  })
+  const [spinner, setSpinner] = useState(false);
+  // const [formData, setFormData] = useState({
+  //   email : "",
+  //   password : ""
+  // })
   const navigate = useNavigate();
   //signup function
   const handleSignup = async (e) => {
     e.preventDefault();
-    setSpinner(true)
+    setSpinner(true);
     try {
       const isSignedUp = await createUserWithEmailAndPassword(
         auth,
@@ -33,19 +33,19 @@ const AuthPage = () => {
         password
       );
       if (isSignedUp) {
-        setSpinner(false)
+        setSpinner(false);
         setUser(isSignedUp.user.email);
         navigate("/dashboard");
       }
     } catch (err) {
-      setSpinner(false)
+      setSpinner(false);
       console.log(err);
     }
   };
   //signin function
   const handleSignin = async (e) => {
     e.preventDefault();
-    setSpinner(true)
+    setSpinner(true);
     try {
       const isSignedIn = await signInWithEmailAndPassword(
         auth,
@@ -53,18 +53,18 @@ const AuthPage = () => {
         password
       );
       if (isSignedIn) {
-        setSpinner(false)
+        setSpinner(false);
         setUser(isSignedIn.user.email);
         navigate("/dashboard");
       }
     } catch (err) {
       console.log(err);
-      setSpinner(false)
+      setSpinner(false);
     }
   };
   // handleFormDataChange = () => {
   //   setFormData(() => {
-  //     ...formData, 
+  //     ...formData,
   //   })
   // }
   return (
@@ -91,7 +91,6 @@ const AuthPage = () => {
             setPassword={setPassword}
             handleSignup={handleSignup}
             spinner={spinner}
-
           />
         )}
       </div>
