@@ -1,8 +1,8 @@
 import Homepage from "./pages/Homepage";
 import About from "./pages/About";
 import AuthPage from "./pages/AuthPage";
-import MyQrs from "./pages/MyQrs"
-import Settings from "./pages/Settings"
+import MyQrs from "./pages/MyQrs";
+import Settings from "./pages/Settings";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -12,7 +12,11 @@ import {
 import RootLayout from "./pages/layouts/RootLayout";
 import DashboardLayout from "./pages/layouts/DashboardLayout";
 import CreateQR from "./pages/CreateQR";
+import { useState } from "react";
+import UserProvider from "./context/UserProvider";
 function App() {
+  const [user, setUser] = useState(null);
+
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<RootLayout />}>
@@ -28,8 +32,10 @@ function App() {
     )
   );
   return (
-    <div className="relative">
-      <RouterProvider router={router} />
+    <div className="">
+      <UserProvider>
+        <RouterProvider router={router} />
+      </UserProvider>
     </div>
   );
 }

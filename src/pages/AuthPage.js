@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import LoginForm from "../components/LoginForm";
 import SignupForm from "../components/SignupForm";
 import authImage from "../images/undraw_unlock_re_a558.svg";
@@ -8,25 +8,40 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+import { userContext } from "../context/UserProvider";
 const AuthPage = () => {
   //states
+  const [user, setUser] = useContext(userContext);
   const [isSignup, setIsSignup] = useState(false);
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
-
+  const [spinner, setSpinner] = useState(false)
+  const navigate = useNavigate();
   //signup function
   const handleSignup = async (e) => {
     e.preventDefault();
+    setSpinner(true)
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
-      console.log(auth.currentUser);
+      const isSignedUp = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      if (isSignedUp) {
+        setSpinner(false)
+        setUser(isSignedUp.user.email);
+        navigate("/dashboard");
+      }
     } catch (err) {
+      setSpinner(false)
       console.log(err);
     }
   };
   //signin function
   const handleSignin = async (e) => {
     e.preventDefault();
+    setSpinner(true)
     try {
       const isSignedIn = await signInWithEmailAndPassword(
         auth,
@@ -34,10 +49,13 @@ const AuthPage = () => {
         password
       );
       if (isSignedIn) {
-        console.log("pkl");
+        setSpinner(false)
+        setUser(isSignedIn.user.email);
+        navigate("/dashboard");
       }
     } catch (err) {
       console.log(err);
+      setSpinner(false)
     }
   };
   return (
@@ -55,6 +73,7 @@ const AuthPage = () => {
             setEmail={setEmail}
             setPassword={setPassword}
             handleSignin={handleSignin}
+            spinner={spinner}
           />
         ) : (
           <SignupForm
@@ -62,6 +81,8 @@ const AuthPage = () => {
             setEmail={setEmail}
             setPassword={setPassword}
             handleSignup={handleSignup}
+            spinner={spinner}
+
           />
         )}
       </div>

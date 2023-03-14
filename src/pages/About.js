@@ -8,14 +8,14 @@ const About = () => {
           <h1 className="text-3xl font-bold text-darkGreen lg:text-4xl xl:text-5xl">
             What is getQr
           </h1>
-          <p className="text-sm font-semibold text-gray-500 md:text-lg lg:max-w-sm">
+          <p className="text-md font-semibold text-gray-500 md:text-lg lg:max-w-sm">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure fugit
             esse tempore, porro quibusdam labore tenetur est? Et repudiandae
             eveniet commodi animi. Exercitationem culpa non vero illo nisi
             reiciendis enim!
           </p>
 
-          <p className="text-sm font-semibold text-gray-500 md:text-lg lg:max-w-sm">
+          <p className="text-md font-semibold text-gray-500 md:text-lg lg:max-w-sm">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus
             nihil, ipsum corrupti exercitationem vero libero beatae, atque optio
             officia explicabo, similique nostrum!

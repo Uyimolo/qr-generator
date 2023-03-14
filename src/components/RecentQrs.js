@@ -1,49 +1,19 @@
 import { Link } from "react-router-dom";
-// import dataArranging from "../images/Data Arranging_Monochromatic.svg";
+import RecentQRDesktop from "./RecentQRDesktop";
+import RecentQrMobile from "./RecentQrMobile";
 const RecentQrs = () => {
-  const paragraphClass = "text-sm font-normal text-gray-700";
-  const recentContainerClass =
-    "flex flex-col space-y-2 px-3 py-2 bg-white mx-auto rounded-md text-left cursor-pointer hover:bg-gray-100 shadow-xl lg:mx-auto hover:text-white xl:px-4";
+  const recentArr = [1, 2, 3, 4];
   return (
-    <div className="flex flex-col space-y-6 rounded-md py-4 px-2 overflow-hidden bg-recentQRImage ">
-      {/* <img
-        src={dataArranging}
-        alt=""
-        className=" mx-auto left-0 right-0 top-0 w-64"
-      /> */}
-      <h2 className="text-2xl font-bold text-center text-gray-700 lg:text-3xl xl:text-4xl ">
+    <div className="flex flex-col rounded-md py-4 bg-recentQRImage">
+      <h2 className="text-2xl font-bold text-center bg-darkGreen py-3 text-gray-200 md:bg-transparent md:text-gray-700 lg:text-3xl xl:text-4xl ">
         Your recent QR codes
       </h2>
-      <div className="flex flex-wrap gap-y-3 xl:px-20 ">
-        <div className={recentContainerClass}>
-          <p className=" text-red-400 hover:text-xl">X</p>
-          <p className={paragraphClass}>Name: fancyurl.com</p>
-          <p className={paragraphClass}>Date: 9-3-2023</p>
-          <p className={paragraphClass}>Clicks: 122</p>
-          <p className={paragraphClass}>Type: URL</p>
-        </div>
-        <div className={recentContainerClass}>
-          <p className="  text-red-400 hover:text-xl">X</p>
-          <p className={paragraphClass}>Name: fancyurl.com</p>
-          <p className={paragraphClass}>Date: 9-3-2023</p>
-          <p className={paragraphClass}>Clicks: 122</p>
-          <p className={paragraphClass}>Type: URL</p>
-        </div>
-        <div className={recentContainerClass}>
-          <p className=" text-red-400 hover:text-xl">X</p>
-          <p className={paragraphClass}>Name: fancyurl.com</p>
-          <p className={paragraphClass}>Date: 9-3-2023</p>
-          <p className={paragraphClass}>Clicks: 122</p>
-          <p className={paragraphClass}>Type: URL</p>
-        </div>
-        <div className={recentContainerClass}>
-          <p className=" text-red-400 hover:text-xl">X</p>
-          <p className={paragraphClass}>Name: fancyurl.com</p>
-          <p className={paragraphClass}>Date: 9-3-2023</p>
-          <p className={paragraphClass}>Clicks: 122</p>
-          <p className={paragraphClass}>Type: URL</p>
-        </div>
+      <div className="flex flex-col justify-center bg-gray-100 border w-full max-w-sm md:max-w-lg mx-auto md:hidden">
+        {/* mobile view */}
+        <RecentQrMobile recentArr={recentArr}/>
       </div>
+      {/* desktop view */}
+      <RecentQRDesktop recentArr={recentArr} />
       <Link to="myqrs" className="w-fit mx-auto text-gray-700 font-semibold">
         See more of your QR codes
       </Link>

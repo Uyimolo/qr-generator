@@ -9,7 +9,7 @@ const Thumbnail = ({ image, heading, text }) => {
         <h3 className="text-md font-bold text-center text-darkGreen mt-4 lg:text-xl">
           {heading}
         </h3>
-        <p className="text-sm font-semibold text-gray-500 text-center max-w-xs lg:text-md lg:px-4">
+        <p className="text-md font-semibold text-gray-500 text-center max-w-xs">
           {text}
         </p>
       </div>
