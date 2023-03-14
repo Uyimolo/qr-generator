@@ -12,10 +12,10 @@ import {
 import RootLayout from "./pages/layouts/RootLayout";
 import DashboardLayout from "./pages/layouts/DashboardLayout";
 import CreateQR from "./pages/CreateQR";
-import { useState } from "react";
+// import { useState } from "react";
 import UserProvider from "./context/UserProvider";
 function App() {
-  const [user, setUser] = useState(null);
+  // const [user, setUser] = useState(null);
 
   const router = createBrowserRouter(
     createRoutesFromElements(
