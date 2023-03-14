@@ -1,5 +1,5 @@
 import Button from "./Button";
-import QrImage from "../images/QR code_Two Color.svg";
+import QrImage from "../images/scanqr3.svg";
 const GetQrNow = () => {
   return (
     <section className="flex flex-col px-6 py-8 items-stretch space-y-12 md:flex-row md:space-y-0 md:py-0 md:px-0">

@@ -29,7 +29,7 @@ const Navigation = ({ navActive, setNavActive }) => {
         About us
       </NavLink>
       <NavLink
-        to="/contact"
+        to="contact"
         className={navListClass}
         onClick={() => setNavActive(false)}
       >

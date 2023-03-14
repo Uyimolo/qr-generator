@@ -1,5 +1,7 @@
-import dataArranging from "../images/Data Arranging_Monochromatic.svg";
+import dataArranging from "../images/data-1.svg";
 import RecentQrs from "../components/RecentQrs";
+import photoIcon from "../images/undraw_photo_re_5blb.svg";
+import linkIcon from "../images/undraw_share_link_re_54rx.svg";
 
 const CreateQR = () => {
   return (
@@ -16,11 +18,11 @@ const CreateQR = () => {
           </p>
           {/* choose action */}
           <div className="flex space-x-4 mx-auto md:mx-0">
-            <div className="rounded-md p-6 text-gray-500 bg-white border border-transparent font-semibold shadow-lg hover:bg-secondary lg:p-8">
-              URL
+            <div className="rounded-md text-gray-500 bg-gray-300 p-2 items-center justify-center border border-transparent font-semibold shadow-lg hover:bg-secondary">
+              <img src={linkIcon} alt="" className="w-20" />
             </div>
-            <div className="rounded-md p-6 text-gray-500 bg-white border border-transparent font-semibold shadow-lg hover:bg-secondary lg:p-8">
-              FILE
+            <div className="rounded-md  text-gray-500 items-center p-2 justify-center bg-gray-300 border border-transparent font-semibold shadow-lg hover:bg-secondary ">
+              <img src={photoIcon} alt="" className="w-20 bg-yellow-20" />
             </div>
           </div>
         </div>
