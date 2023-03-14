@@ -1,8 +1,8 @@
-import qrReader from "../images/QR code_Flatline.svg";
+import qrReader from "../images/scanqr1.svg";
 import Button from "./Button";
 const Landing = () => {
   return (
-    <div className="flex flex-col bg-white px-6 pt-16 pb-10 items-center space-y-2 md:flex-row md:pl-16 md:pr-4 lg:pl-24 lg:pr-12 xl:pl-36 xl:pr-20 md:justify-between">
+    <div className="flex flex-col px-6 pt-16 pb-10 items-center space-y-2 md:flex-row md:pl-16 md:pr-4 lg:pl-24 lg:pr-12 xl:pl-36 xl:pr-20 md:justify-between">
       <div className="flex flex-col space-y-4  md:max-w-xs lg:max-w-sm xl:max-w-md">
         <h1 className="text-3xl font-bold text-center text-darkGreen lg:text-4xl md:text-left xl:text-5xl">
           QR Code generator with a difference

@@ -17,6 +17,10 @@ const AuthPage = () => {
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
   const [spinner, setSpinner] = useState(false)
+  const [formData, setFormData] = useState({
+    email : "",
+    password : ""
+  })
   const navigate = useNavigate();
   //signup function
   const handleSignup = async (e) => {
@@ -58,8 +62,13 @@ const AuthPage = () => {
       setSpinner(false)
     }
   };
+  // handleFormDataChange = () => {
+  //   setFormData(() => {
+  //     ...formData, 
+  //   })
+  // }
   return (
-    <div className="flex flex-col px-6 py-8 bg-white space-y-12  md:justify-between  md:px-16 md:pt-20 md:pb-20 lg:justify-center lg:space-x-28 lg:flex-row lg:px-24 xl:px-36">
+    <div className="flex flex-col px-6 py-8 space-y-12  md:justify-between  md:px-16 md:pt-20 md:pb-20 lg:justify-center lg:space-x-28 lg:flex-row lg:px-24 xl:px-36">
       <img
         src={authImage}
         alt=""

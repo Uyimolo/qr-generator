@@ -14,6 +14,7 @@ import DashboardLayout from "./pages/layouts/DashboardLayout";
 import CreateQR from "./pages/CreateQR";
 // import { useState } from "react";
 import UserProvider from "./context/UserProvider";
+import Error404page from "./pages/Error404page";
 function App() {
   // const [user, setUser] = useState(null);
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="myqrs" element={<MyQrs />} />
           <Route path="settings" element={<Settings />} />
         </Route>
+        <Route path="*" element={<Error404page />} />
       </Route>
     )
   );

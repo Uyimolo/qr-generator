@@ -1,7 +1,7 @@
-import scan from "../images/QR code_Monochromatic.svg";
+import scan from "../images/scanqr2.svg";
 const About = () => {
   return (
-    <section className="flex flex-col bg-white px-6 py-8 items-center space-y-12 md:px-16 md:pt-20 md:pb-20 lg:px-24 xl:px-36">
+    <section className="flex flex-col px-6 py-8 items-center space-y-12 md:px-16 md:pt-20 md:pb-20 lg:px-24 xl:px-36">
       <div className="flex flex-col w-full items-center justify-between space-y-7 lg:flex-row">
         {/* text */}
         <div className="flex flex-col space-y-3 lg:w-1/2">
